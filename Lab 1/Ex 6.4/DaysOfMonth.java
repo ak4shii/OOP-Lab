@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class DaysOfMonth{
-    int leapYear(String month){
+    public static int leapYear(String month){
         int noD;
         switch (month){
             case "January", "Jan.", "Jan", "1":
@@ -47,7 +47,7 @@ public class DaysOfMonth{
         return noD;
     }
 
-    int normalYear(String month){
+    public static int normalYear(String month){
         int noD;
         switch (month){
             case "January", "Jan.", "Jan", "1":
@@ -92,37 +92,40 @@ public class DaysOfMonth{
         }
         return noD;
     }
+
+    public static boolean monthCheck(String[] monthAvailable, String res){
+        for (String month:monthAvailable){
+            if (res.compareTo(month) == 0){
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
+
         System.out.print("Enter the year: ");
         int year = input.nextInt();
+        while (year <= 0){
+            System.out.print("This is not a valid year, please enter again: ");
+            year = input.nextInt();
+        }
 
+        String[] monthAvail = {"January", "Jan.", "Jan", "1", "February", "Feb.", "Feb", "2", "March", "Mar.", "Mar", "3", "April", "Apr.", "Apr", "4", "May", "5", "June", "Jun", "6", "July", "Jul", "7", "August", "Aug.", "Aug", "8", "September", "Sep.", "Sep", "9", "October", "Oct.", "Oct", "10", "November", "Nov.", "Nov", "11", "December", "Dec.", "Dec", "12"};
         System.out.print("Enter the month: ");
         String month = input.nextLine();
         month = input.nextLine();
+        while (monthCheck(monthAvail, month) == false){
+            System.out.print("This is not a month, please enter again: ");
+            month = input.nextLine();
+        }
         
-        DaysOfMonth obj = new DaysOfMonth();
         int days;
-        if (year % 4 == 0){
-            if (year % 100 == 0){
-                if (year % 400 == 0){
-                    days = obj.leapYear(month);
-                    System.out.println("The month " + month + " of the year " + year + " has " + days + " days.");
-                }
-                else{
-                    days = obj.normalYear(month);
-                    System.out.println("The month " + month + " of the year " + year + " has " + days + " days.");
-                }
-            }
-            else{
-                days = obj.leapYear(month);
-                System.out.println("The month " + month + " of the year " + year + " has " + days + " days.");
-            }
-        }
-        else{
-            days = obj.normalYear(month);
-            System.out.println("The month " + month + " of the year " + year + " has " + days + " days.");
-        }
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+            days = leapYear(month);
+        else
+            days = normalYear(month);
+        System.out.println("The month " + month + " of the year " + year + " has " + days + " days.");
         
         input.close();
    }
