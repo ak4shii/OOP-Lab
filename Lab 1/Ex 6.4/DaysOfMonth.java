@@ -115,7 +115,7 @@ public class DaysOfMonth{
         System.out.print("Enter the month: ");
         String month = input.nextLine();
         month = input.nextLine();
-        while (monthCheck(monthAvail, month) == false){
+        while (!monthCheck(monthAvail, month)){
             System.out.print("This is not a month, please enter again: ");
             month = input.nextLine();
         }
