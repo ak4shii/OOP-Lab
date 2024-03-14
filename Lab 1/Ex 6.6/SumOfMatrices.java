@@ -36,7 +36,6 @@ public class SumOfMatrices{
             }
             System.out.print("\n");
         }
-
         input.close();
     }
 }
