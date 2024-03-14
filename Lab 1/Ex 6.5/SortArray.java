@@ -20,9 +20,9 @@ public class SortArray{
         for (int i = 0; i < n; i++){
             System.out.print(arr[i] + " ");
         }
-        System.out.println("\nThe sum of the array is: " + sumOfArray);
+        System.out.print("\nThe sum of the array is: " + sumOfArray);
         double AverageVal = sumOfArray / n;
-        System.out.println("The average value of array elements is: " + AverageVal);
+        System.out.println("\nThe average value of array elements is: " + AverageVal);
 
         input.close();
     }

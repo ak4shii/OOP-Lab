@@ -1,4 +1,4 @@
-import java.swing.JOptionPane;
+import javax.swing.JOptionPane;
 import java.lang.Math;
 
 public class TwoDoubleNumsCalculation{
@@ -6,8 +6,8 @@ public class TwoDoubleNumsCalculation{
         String strNum1, strNum2;
         double num1, num2;
 
-        strNum1 = JOptionPane.showInputDialog(null, "Please input the first number: ", "Input the first number", JOptionPane.INFORMATION_MESSAGE);
-        strNum2 = JOptionPane.showInputDialog(null, "Please input the second number: ", "Input the second number", JOptionPane.INFORMATION_MESSAGE);
+        strNum1 = JOptionPane.showInputDialog(null, "Please enter the first number: ", "Input the first number", JOptionPane.INFORMATION_MESSAGE);
+        strNum2 = JOptionPane.showInputDialog(null, "Please enter the second number: ", "Input the second number", JOptionPane.INFORMATION_MESSAGE);
         num1 = Double.parseDouble(strNum1);
         num2 = Double.parseDouble(strNum2);
 
@@ -17,7 +17,7 @@ public class TwoDoubleNumsCalculation{
         double quotient = num1 / num2;
         
         String res = "Sum: " + sum + "\nDifference: " + difference + "\nProduct: " + product + "\nQuotien: " + quotient;
-        JOptionPane.showMessageDialog(null, res, "Calculation of two numbers", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, res, "Calculation", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
     }
 }
