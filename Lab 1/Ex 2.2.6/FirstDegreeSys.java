@@ -25,6 +25,7 @@ public class FirstDegreeSys{
             res = "The solutions of the system are: " + (det1 / det) + " and " + (det2 / det);
         }
         System.out.println(res);
+        
         System.exit(0);
     }
 }

@@ -34,6 +34,7 @@ public class SecondDegreeEq{
                 res = "The equation has two solutions: " + ((-b + Math.sqrt(delta)) / (2 * a)) + " and " + ((-b - Math.sqrt(delta)) / (2 * a));
         }
         System.out.println(res);
+        
         System.exit(0);
     }
 }

@@ -25,6 +25,7 @@ public class FirstDegreeEq{
             }
         }
         JOptionPane.showMessageDialog(null, res, "Result", JOptionPane.INFORMATION_MESSAGE);
+        
         System.exit(0);
     }
 }
