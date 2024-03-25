@@ -15,6 +15,7 @@ public class TriangleDisplay{
             }
             System.out.print("\n");
         }
+        
         input.close();
     }
 }

@@ -24,8 +24,8 @@ public class FirstDegreeSys{
             det2 = a11 * b2 - a21 * b1;
             res = "The solutions of the system are: " + (det1 / det) + " and " + (det2 / det);
         }
-        System.out.println(res);
-        
+        JOptionPane.showMessageDialog(null, res, "Result", JOptionPane.INFORMATION_MESSAGE);
+
         System.exit(0);
     }
 }
