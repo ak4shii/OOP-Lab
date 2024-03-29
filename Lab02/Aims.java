@@ -73,7 +73,7 @@ class Cart{
         else{
             this.itemsOrdered[this.qtyOrdered] = disc;
             this.qtyOrdered++;
-            System.out.println("The disc has been added");
+            System.out.println("The disc has been added.");
         }
     }
 
@@ -88,6 +88,7 @@ class Cart{
         }
         this.itemsOrdered = newitemsOrdered;
         this.qtyOrdered--;
+        System.out.println("\n\nOne disc has been deleted.");
     }
 
     public float totalCost(){
@@ -112,12 +113,12 @@ public class Aims{
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         an0rder.addDigitalVideoDisc(dvd3);
 
-        System.out.println("\nList of discs ordered: ");
+        System.out.println("\nList of disc(s) ordered: ");
         an0rder.printCart();
         System.out.print("Total cost: ");
         System.out.printf("%.2f", an0rder.totalCost());
         an0rder.removeDigitalVideoDisc(dvd2);
-        System.out.println("\n\nUpdated list of disc ordered: ");
+        System.out.println("\nUpdated list of disc(s) ordered: ");
         an0rder.printCart();
         System.out.print("Total cost: ");
         System.out.printf("%.2f", an0rder.totalCost());
