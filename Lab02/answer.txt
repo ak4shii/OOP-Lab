@@ -1,0 +1,3 @@
+- No since Java does not allow you to create two constructors with the same type and number of parameters.
+- Java would not be able to differentiate between the two constructors you are suggesting as both of them take a single String parameter.
+This is because constructors are distinguished by types and number of their parameters, but not by the parameters' names or intention when used 
