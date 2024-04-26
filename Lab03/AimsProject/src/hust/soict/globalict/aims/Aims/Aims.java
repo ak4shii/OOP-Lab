@@ -320,7 +320,7 @@ public class Aims{
     	System.out.println("Options:");
     	System.out.println("-----------------------");
     	System.out.println("1. Filter by Title");
-    	System.out.println("2. Filter by Id");
+    	System.out.println("2. Filter by ID");
     	System.out.println("0. Back");
     	System.out.println("-----------------------");
     	System.out.println("Please choose an option: ");
