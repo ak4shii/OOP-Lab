@@ -33,7 +33,7 @@ public class DigitalVideoDisc extends Disc implements Playable{
         this.cost = cost;
     }
 
-    public DigitalVideoDisc( String title, String category, String director, float cost){
+    public DigitalVideoDisc(String title, String category, String director, float cost){
         super();
         this.title = title;
         this.category = category;
@@ -41,13 +41,14 @@ public class DigitalVideoDisc extends Disc implements Playable{
         this.director = director;
     }
 
-    public DigitalVideoDisc(String title, String category, String director, int length, float cost){
+    public DigitalVideoDisc(int id, String title, String category, String director, int length, float cost){
         super();
         this.title = title;
         this.category = category;
         this.cost = cost;
         this.director = director;
         this.length = length;
+        this.id = id;
     }
     
     @Override
@@ -57,8 +58,11 @@ public class DigitalVideoDisc extends Disc implements Playable{
     
 	@Override
 	public void play(){
-		//TODO Auto-generated method stub
-		System.out.println("Title of the DVD being played: " + this.getTitle());
-		System.out.println("Length of the DVD being played: " + this.getLength());
+		//TODO Auto-generated method
+		if (this.getLength() > 0) {
+			System.out.println("Title of the DVD being played: " + this.getTitle());
+			System.out.println("Length of the DVD being played: " + this.getLength());
+		}
+		else System.out.println("The DVD cannot be played!");
 	}
 }

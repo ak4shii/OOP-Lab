@@ -14,8 +14,7 @@ public class CompactDisc extends Disc implements Playable{
 	public void addTrack(Track track){
 		if(this.tracks.contains(track))
 			System.out.println("The track was added already");
-		else
-			this.tracks.add(track);
+		else this.tracks.add(track);
 	}
 	
 	public void removeTrack(Track track){
@@ -39,17 +38,34 @@ public class CompactDisc extends Disc implements Playable{
         this.cost = cost;
     }
 
+	public CompactDisc(int id, String title, String category, String director,String artist, int length , float cost){
+        super();
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+        this.id = id;
+        this.director = director;
+        this.length = length;
+        this.artist = artist;
+    }
+
 	@Override
 	public void play(){
 		//TODO Auto-generated method stub
-		for (Track track: this.tracks){
-			System.out.println("Title of the DVD being played: " + track.getTitle());
-			System.out.println("Length of the DVD being played: " + track.getLength());
+		System.out.println("Title of the CD being played: " + this.getTitle());
+		System.out.println("Length of the CD being played: " + this.getLength());
+		if(this.getLength() == 0 ) System.out.println("The CD cannot be played!");
+		for (Track track : this.tracks){
+			if (track.getLength() > 0 ){
+				System.out.println("Title of the Track being played: " + track.getTitle());
+				System.out.println("Length of the Track being played: " + track.getLength());
+			}
+			else System.out.println("The Track cannot be played!");
 		}
 	}
 	
 	@Override
     public String toString(){
-    	return ".CD - " + this.getTitle() + " - " + this.getCategory() +  ": " + this.getCost() + "$";
+    	return ".CD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getArtist() + " - " + this.getLength() +   ": " + this.getCost() + "$";
     }
 }
