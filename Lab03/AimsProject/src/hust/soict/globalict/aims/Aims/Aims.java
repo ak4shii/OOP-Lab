@@ -14,7 +14,7 @@ public class Aims{
     	Cart cart = new Cart();
     	int choice, choice_2, choice_3;
     	
-    	do {
+    	do{
     		showMenu();
     		choice = input.nextInt();
     		input.nextLine();
@@ -28,29 +28,30 @@ public class Aims{
 	 	        		input.nextLine();
 		        		switch (choice_2){
 		                 case 1:
-		                	 System.out.println("Please enter the Title of the Media: ");
-		                     String title = input.nextLine();
-		                     DigitalVideoDisc discView1;
-		                     CompactDisc discView2;
-		                     Book bookView;
-		                     if (store.returnMediaDetails(title) != null ) {
-		                    	 if (store.returnMediaDetails(title) instanceof DigitalVideoDisc) {
-		                    		 discView1 = (DigitalVideoDisc) store.returnMediaDetails(title); 
-		                    		 System.out.println(discView1.toString());
-			                    	}
-		                    	 else if (store.returnMediaDetails(title) instanceof CompactDisc) {
-			                    		discView2 = (CompactDisc) store.returnMediaDetails(title); 
-			                    		System.out.println(discView2.toString());
-			                    	}
- 			                     else if (store.returnMediaDetails(title) instanceof Book) {
-				                    	bookView = (Book) store.returnMediaDetails(title); 
-				                    	System.out.println(bookView.toString());
-				                    }	                     
-		                    	do{
-				                     mediaDetailsMenu();
-				                     choice_3 = input.nextInt();
-				 	        		 input.nextLine();
-				 	        		 switch (choice_3){
+		                	System.out.println("Please enter the Title of the Media: ");
+		                    String title = input.nextLine();
+							DigitalVideoDisc discView1;
+		                    CompactDisc discView2;
+		                    Book bookView;
+		                    if (store.returnMediaDetails(title) != null){
+		                    	discView1 = (DigitalVideoDisc) store.returnMediaDetails(title); 
+		                    	System.out.println(discView1.toString());
+			            	}
+			                    		
+			             	else if (store.returnMediaDetails(title) instanceof CompactDisc){
+			                		discView2 = (CompactDisc) store.returnMediaDetails(title); 
+			                		System.out.println(discView2.toString());
+			                	}
+                    	
+		                    else if (store.returnMediaDetails(title) instanceof Book){
+			                    	bookView = (Book) store.returnMediaDetails(title); 
+			                    	System.out.println(bookView.toString());
+			                    }		                     
+		                    do{
+				                mediaDetailsMenu();
+				                choice_3 = input.nextInt();
+				 	        	input.nextLine();
+				 	        	 switch (choice_3){
 					                    case 1:
 					                    	System.out.println("Please enter the Title of the Media you want to add to Cart: ");
 						                    String title_2 = input.nextLine();
@@ -130,7 +131,7 @@ public class Aims{
 		                     break;
 		                 case 4:
 		 	            	do{
-		 	            		cart.viewCart();
+								cart.viewCart();
 		 	            		cartMenu();
 		 		        		choice_2 = input.nextInt();
 		 		        		input.nextLine();
@@ -146,7 +147,7 @@ public class Aims{
 		 			        							String title_4 = input.nextLine();
 		 			        							cart.filterByTitle(title_4);
 		 			        							break;
-		 			        						case 2:
+													case 2:
 		 			        							System.out.println("Please enter the ID of the media you want to filter: ");
 		 			        							int id = input.nextInt();
 		 			        							cart.filterById(id);
@@ -178,7 +179,6 @@ public class Aims{
 		 		        							break;
 		 		        						case 0:
 		 		        							System.out.println("Exiting...");
-		 		        							break;
 		 		        						default:
 		 		        							System.out.println("Invalid Option.");
 		 		        					}
@@ -238,7 +238,7 @@ public class Aims{
 	            	System.out.println("Please enter the type of Media you want to add to Store(DVD, CD, Book): ");
 	                String type = input.nextLine();
 	                if (type.compareTo("DVD") == 0){
-	                	System.out.println("ID: ");
+						System.out.println("ID: ");
 	                	int id = input.nextInt();
 	                	input.nextLine();
 	                	System.out.println("Title: ");
@@ -251,7 +251,7 @@ public class Aims{
 	                	int length = input.nextInt();
 	                	System.out.println("Cost: ");
 	                	float cost = input.nextFloat();
-	                	DigitalVideoDisc dvd = new DigitalVideoDisc(id, title, category, director, length, cost);
+	                	DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length, cost);
 	                	store.addDVD(dvd);
 	                }
 	                if (type.compareTo("CD") == 0){
@@ -270,13 +270,12 @@ public class Aims{
 	                	int length = input.nextInt();
 	                	System.out.println("Cost: ");
 	                	float cost = input.nextFloat();
-	                	CompactDisc cd = new CompactDisc(id, title, category, director, artist, length, cost);
+	                	CompactDisc cd = new CompactDisc(id, title, category, director,artist, length, cost);
 	                	store.addDVD(cd);
 	                }
 	                if (type.compareTo("Book") == 0){
-	                	System.out.println("ID: ");
+						System.out.println("ID: ");
 	                	int id = input.nextInt();
-	                	input.nextLine();
 	                	System.out.println("Title: ");
 	                	String title = input.nextLine();
 	                	System.out.println("Category: ");

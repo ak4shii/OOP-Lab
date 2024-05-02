@@ -25,7 +25,7 @@ public class Store{
 	
 	public void viewMediaDetails(String title){
 		int count = 0;
-		for (Media m:itemsInStore){
+		for (Media m : itemsInStore){
 			if (m.isMatch(title) == 0){
 				count += 1;
 				System.out.println(count + m.toString());
@@ -34,7 +34,7 @@ public class Store{
 	}
 	
 	public Media returnMediaDetails(String title){
-		for (Media m:itemsInStore){
+		for (Media m : itemsInStore){
 			if (m.isMatch(title) == 0) return m;
 		}
 		return null;
