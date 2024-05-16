@@ -13,19 +13,19 @@ public class CompactDisc extends Disc implements Playable{
 	
 	public void addTrack(Track track){
 		if(this.tracks.contains(track))
-			System.out.println("The track was added already");
+			System.out.println("The track was added already.");
 		else this.tracks.add(track);
 	}
 	
 	public void removeTrack(Track track){
 		if(!this.tracks.contains(track))
-			System.out.println("The track does not exist");
+			System.out.println("The track does not exist.");
 		else this.tracks.remove(track);
 	}
 	
 	public int getLength(){
 		int length = 0;
-		for (Track track : tracks){
+		for (Track track:tracks){
 			length += track.getLength();
 		}
 		return length;
@@ -55,8 +55,8 @@ public class CompactDisc extends Disc implements Playable{
 		System.out.println("Title of the CD being played: " + this.getTitle());
 		System.out.println("Length of the CD being played: " + this.getLength());
 		if(this.getLength() == 0 ) System.out.println("The CD cannot be played!");
-		for (Track track : this.tracks){
-			if (track.getLength() > 0 ){
+		for (Track track:this.tracks){
+			if (track.getLength() > 0){
 				System.out.println("Title of the Track being played: " + track.getTitle());
 				System.out.println("Length of the Track being played: " + track.getLength());
 			}
@@ -66,6 +66,6 @@ public class CompactDisc extends Disc implements Playable{
 	
 	@Override
     public String toString(){
-    	return ".CD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getArtist() + " - " + this.getLength() +   ": " + this.getCost() + "$";
+    	return "CD: " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getArtist() + " - " + this.getLength() +   ": " + this.getCost() + "$.";
     }
 }

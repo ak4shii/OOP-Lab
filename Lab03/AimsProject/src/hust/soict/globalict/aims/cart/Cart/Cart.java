@@ -21,20 +21,20 @@ public class Cart{
     public void removeMedia(String title){
     	if (findMediaByTitle(title) != null){
     		itemsOrdered.remove(findMediaByTitle(title));
-    		System.out.println("Successfully deleted item from the Cart");
+    		System.out.println("Successfully deleted Item from the Cart.");
     	}
     }
     
     public void filterByTitle(String title){
-    	for (Media m : itemsOrdered){
+    	for (Media m:itemsOrdered){
     		if (m.getTitle().contains(title)) 
     			System.out.println(m.getId() + " " + m.toString());
 		}
 	}
 
     public void filterById(int id){
-    	for (Media m : itemsOrdered) {
-    		if (m.getId() == id) {
+    	for (Media m:itemsOrdered){
+    		if (m.getId() == id){
     			System.out.println(m.getId() + " " + m.toString());
     		}
     	}
@@ -54,8 +54,8 @@ public class Cart{
 
     public float totalCost(){
         float sum = 0;
-        for(Media media : itemsOrdered){
-            sum += media.getCost(); 
+        for(Media m:itemsOrdered){
+            sum += m.getCost(); 
         }
         return sum;
     }
@@ -65,8 +65,9 @@ public class Cart{
     }
     
     public void viewCart(){
-    	for (Media item : itemsOrdered ){
-    		System.out.println(item.toString());
+        int count = 0;
+    	for (Media item:itemsOrdered){
+    		System.out.println((count + 1) + ". " + item.toString());
     	}
     }
 }

@@ -15,12 +15,12 @@ public class MediaTest{
 		mediae.add(dvd);
 		mediae.add(b);
 		
-		for (Media m : mediae){
+		for (Media m:mediae){
 			System.out.println(m.toString());
 		}
 	}
 
-	public MediaTest() {
+	public MediaTest(){
 		//TODO Auto-generated constructor stub
 	}
 

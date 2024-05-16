@@ -33,12 +33,12 @@ public class Book extends Media implements Playable{
 	
     @Override
     public String toString(){
-    	return ".Book - " + this.getTitle() + " - " + this.getCategory() + " - "  + this.authors.toString() + ": " + this.getCost() + "$";
+    	return "Book: " + this.getTitle() + " - " + this.getCategory() + " - "  + this.authors.toString() + ": " + this.getCost() + "$.";
     }
 
 	@Override
 	public void play(){
 		//TODO Auto-generated method stub
-		System.out.println("This action cannot be applied for this type of media");
+		System.out.println("This action cannot be applied for this type of Media.");
 	}
 }

@@ -8,7 +8,7 @@ public class Store{
 	
 	public void addDVD(Media disc){
 		this.itemsInStore.add(disc);
-		System.out.println("Successfully added item to the Store");
+		System.out.println("Successfully added Item to the Store");
 	}
 	
 	public void removeDVD(Media disc){
@@ -25,16 +25,16 @@ public class Store{
 	
 	public void viewMediaDetails(String title){
 		int count = 0;
-		for (Media m : itemsInStore){
+		for (Media m:itemsInStore){
 			if (m.isMatch(title) == 0){
-				count += 1;
-				System.out.println(count + m.toString());
+			    count += 1;
+			    System.out.println(count + m.toString());
 			}
 		}
 	}
 	
 	public Media returnMediaDetails(String title){
-		for (Media m : itemsInStore){
+		for (Media m:itemsInStore){
 			if (m.isMatch(title) == 0) return m;
 		}
 		return null;
