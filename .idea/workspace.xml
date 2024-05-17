@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57ba35ea-0f0a-4941-8cbc-975744e412cc" name="Changes" comment="" />
+    <list default="true" id="f4372a83-2f8b-4d59-bf9f-6089a26c6455" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Lab03/AimsProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab03/AimsProject/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2gIuvIJRdGtCtMLj5PK6IEDNajD" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2gbCTA9C5ImDPauEmqijJoL4haO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,7 +28,7 @@
     "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/monik/OneDrive/Documents/2kki's code/OOP_Lab/Lab04",
+    "last_opened_file_path": "C:/Users/monik/OneDrive/Documents/2kki's code/OOP_Lab",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -43,13 +44,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="57ba35ea-0f0a-4941-8cbc-975744e412cc" name="Changes" comment="" />
-      <created>1715397644716</created>
+      <changelist id="f4372a83-2f8b-4d59-bf9f-6089a26c6455" name="Changes" comment="" />
+      <created>1715956897780</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715397644716</updated>
-      <workItem from="1715397645909" duration="23000" />
-      <workItem from="1715955034730" duration="55000" />
+      <updated>1715956897780</updated>
+      <workItem from="1715956898617" duration="77000" />
     </task>
     <servers />
   </component>
