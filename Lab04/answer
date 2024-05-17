@@ -7,9 +7,9 @@ Dialog: Used for creating dialog windows(both modal and non-modal).
 Applet: Used for creating applets to run in a web browser.
 
 - Swing:
-JFrame: The primary top-level container for Swing applications. It is a subclass of java.awt.Frame but it provides more features.
-JDialog: Used for creating dialog windows in Swing. It extends java.awt.Dialog.
-JApplet: Used for creating applets in Swing. It extends java.applet.Applet.
+JFrame: The primary top-level container for Swing applications, a subclass of java.awt.Frame but provides more features.
+JDialog: An extension of java.awt.Dialog, used for creating dialog windows in Swing
+JApplet: An extension of java.applet.Applet, used for creating applets in Swing.
 JWindow: A Swing container that extends java.awt.Window and provides additional features.
 
 2. Component Class Names
@@ -34,7 +34,7 @@ PopupMenu	 	     JPopupMenu
 
 3. Event Handling
 - AWT Event Handling:
-AWT uses the Delegation Event Model introduced in JDK 1.1, and Event Listeners in AWT are part of the java.awt.event package.
+AWT uses the Delegation Event Model, and Event Listeners in AWT are part of the java.awt.event package.
 AWT components generate events that are handled by Event Listeners. For example, an ActionEvent from a Button is handled by an ActionListener.
 
 - Swing Event Handling:
