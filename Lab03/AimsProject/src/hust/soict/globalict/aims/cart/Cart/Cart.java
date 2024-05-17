@@ -67,7 +67,8 @@ public class Cart{
     public void viewCart(){
         int count = 0;
     	for (Media item:itemsOrdered){
-    		System.out.println((count + 1) + ". " + item.toString());
+            count += 1;
+    		System.out.println(count + ". " + item.toString());
     	}
     }
 }

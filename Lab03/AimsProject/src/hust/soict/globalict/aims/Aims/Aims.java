@@ -29,12 +29,12 @@ public class Aims{
 	 	        		scanner.nextLine();
 		        		switch (choice_2){
 		                    case 1:
-		                	    System.out.println("Enter the Title of the Media you want to view: ");
+		                        System.out.println("Enter the Title of the Media you want to view: ");
 		                        String title = scanner.nextLine();
 		                        DigitalVideoDisc discView1;
 		                        CompactDisc discView2;
 		                        Book bookView;
-		                        if (store.returnMediaDetails(title) != null ){
+		                        if (store.returnMediaDetails(title) != null){
 		                    	    if (store.returnMediaDetails(title) instanceof DigitalVideoDisc){
 		                    		    discView1 = (DigitalVideoDisc) store.returnMediaDetails(title); 
 		                    		    System.out.println(discView1.toString());
@@ -43,7 +43,7 @@ public class Aims{
 			                    	else if (store.returnMediaDetails(title) instanceof CompactDisc){
 			                    		discView2 = (CompactDisc) store.returnMediaDetails(title); 
 			                    		System.out.println(discView2.toString());
-			                    	}
+									}
 			                    	
 				                    else if (store.returnMediaDetails(title) instanceof Book){
 				                    	bookView = (Book) store.returnMediaDetails(title); 
@@ -195,7 +195,7 @@ public class Aims{
 						                    String title_5 = scanner.nextLine();
 						                    DigitalVideoDisc disc3;
     					                    CompactDisc disc4;
-	    				                    Book book1;
+	    				                    Book book1;	
 		    				                if (store.returnMediaDetails(title_5) != null){
 			    			                	if (store.returnMediaDetails(title_5) instanceof DigitalVideoDisc){
 				    		                		disc3 = (DigitalVideoDisc) store.returnMediaDetails(title_5); 
@@ -305,11 +305,11 @@ public class Aims{
     
     //Home Interface
     public static void showMenu(){
-    	System.out.println("AIMS: ");
+    	System.out.println("AIMS:");
     	System.out.println("-----------------------");
-    	System.out.println("1. View store");
-    	System.out.println("2. Update store");
-    	System.out.println("3. See current cart");
+    	System.out.println("1. View Store");
+    	System.out.println("2. Update Store");
+    	System.out.println("3. See current Cart");
     	System.out.println("0. Exit");
     	System.out.println("-----------------------");
     	System.out.println("Please choose a number: 0-1-2-3");	
@@ -319,10 +319,10 @@ public class Aims{
     public static void storeMenu(){
     	System.out.println("Options");
     	System.out.println("-----------------------");
-    	System.out.println("1. See a media's details");
-    	System.out.println("2. Add a media to cart");
-    	System.out.println("3. Play a media");
-    	System.out.println("4. See current cart");
+    	System.out.println("1. See a Media's details");
+    	System.out.println("2. Add a Media to Cart");
+    	System.out.println("3. Play a Media");
+    	System.out.println("4. See current Cart");
     	System.out.println("0. Back");
     	System.out.println("-----------------------");
     	System.out.println("Please choose a number: 0-1-2-3-4");
@@ -332,7 +332,7 @@ public class Aims{
     public static void mediaDetailsMenu(){
     	System.out.println("Options");
     	System.out.println("-----------------------");
-    	System.out.println("1. Add to cart");
+    	System.out.println("1. Add to Cart");
     	System.out.println("2. Play");
     	System.out.println("0. Back");
     	System.out.println("-----------------------");
@@ -343,11 +343,11 @@ public class Aims{
     public static void cartMenu(){
     	System.out.println("Options");
     	System.out.println("-----------------------");
-    	System.out.println("1. Filter media in cart");
-    	System.out.println("2. Sort media in cart");
-    	System.out.println("3. Remove media from cart");
-    	System.out.println("4. Play a media");
-    	System.out.println("5. Place order");
+    	System.out.println("1. Filter Media in Cart");
+    	System.out.println("2. Sort Media in Cart");
+    	System.out.println("3. Remove Media from Cart");
+    	System.out.println("4. Play a Media");
+    	System.out.println("5. Place Order");
     	System.out.println("0. Back");
     	System.out.println("-----------------------");
     	System.out.println("Please choose a number: 0-1-2-3-4-5");
