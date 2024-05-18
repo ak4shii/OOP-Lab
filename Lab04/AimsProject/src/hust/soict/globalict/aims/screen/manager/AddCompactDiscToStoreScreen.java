@@ -21,7 +21,7 @@ public class AddCompactDiscToStoreScreen extends AddItemToStoreScreen {
         super.centerPanel.add(artist);
 
         btnAdd.addActionListener(new btnAddListener());
-        super.setTitle("Add Compact Disc");
+        super.setTitle("Add CD");
         super.setVisible(true);  
     }
 
@@ -63,7 +63,7 @@ public class AddCompactDiscToStoreScreen extends AddItemToStoreScreen {
                 CompactDisc cd = new CompactDisc(id, title, category, director, artist, length, cost);
                 store.addMedia(cd);
 
-                JOptionPane.showMessageDialog(null, "Compact Disc was added successfully.");
+                JOptionPane.showMessageDialog(null, "CD was added successfully!");
                 new StoreManagerScreen(store);
                 dispose();
             } catch (NumberFormatException ex) {

@@ -52,13 +52,13 @@ public abstract class AddItemToStoreScreen extends JFrame {
     }
 
     JPanel createCenter() {
-        JPanel centerPanel = new JPanel(new GridLayout(7, 1, 4, 4));
-        
+        JPanel centerPanel = new JPanel(new GridLayout(8, 2, 4, 4));
+
         JPanel idPanel = createSubPanel("ID");
         JPanel titlePanel = createSubPanel("Title");
         JPanel categoryPanel = createSubPanel("Category");
         JPanel costPanel = createSubPanel("Cost");
-        
+
         centerPanel.add(idPanel);
         centerPanel.add(titlePanel);
         centerPanel.add(categoryPanel);
@@ -70,7 +70,7 @@ public abstract class AddItemToStoreScreen extends JFrame {
     JMenuBar createMenuBar() {
         JMenu menu = new JMenu("Options");
 
-        JMenuItem viewStoreMenu = new JMenuItem("View store");
+        JMenuItem viewStoreMenu = new JMenuItem("View Store");
         menu.add(viewStoreMenu);
         viewStoreMenu.addActionListener(new btnMenuListener());
 

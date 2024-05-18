@@ -105,7 +105,7 @@ public class StoreManagerScreen extends JFrame {
                 JButton playButton = new JButton("Play");
                 playButton.addActionListener(e -> playMedia((Playable) media));
                 container.add(playButton);
-            } 
+            }
 
             this.add(Box.createVerticalGlue());
             this.add(title);
@@ -159,14 +159,12 @@ public class StoreManagerScreen extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         Store store = new Store();
         //Example
         store.addMedia(new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f));
-        store.addMedia(new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f));
-        store.addMedia(new DigitalVideoDisc("Aladdin", "Animation", "John Musker", 90, 18.99f));
         store.addMedia(new Book("Harry Potter", "Fantasy", 29.5f));
-        
-        new StoreManagerScreen(store);
+
+        new StoreManagerScreen(store); */
     }
 }

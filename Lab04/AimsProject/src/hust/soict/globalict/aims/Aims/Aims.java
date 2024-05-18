@@ -168,13 +168,13 @@ public class Aims{
 		 		        				    	switch (choice_3){
 		 	        						        case 1: 
 			        							        cart.sortByCost();
-	 		                							System.out.println("Sort by Cost Successfully!");
+	 		                							System.out.println("Sort by Cost successfully!");
 	    	 		            						System.out.println("The updated Cart: ");
 		     		            						cart.viewCart();
 		 	    	            						break;
 		 		              	    				case 2:
 		 		            		    				cart.sortByTitle();
-		 		        	    		   		    	System.out.println("Sort by Title Successfully!");
+		 		        	    		   		    	System.out.println("Sort by Title successfully!");
 		 		        		    		    		System.out.println("The updated Cart: ");
 		 		        				    			cart.viewCart();
 		 		    	    				    		break;
@@ -239,7 +239,7 @@ public class Aims{
 	            	System.out.println("Enter the type of Media you want to add to Store(DVD, CD, Book): ");
 	                String type = scanner.nextLine();
 	                
-	                if (type.compareTo("DVD") == 0) {
+	                if (type.compareTo("DVD") == 0){
 	                	System.out.println("Enter the ID of the DVD: ");
 	                	int id = scanner.nextInt();
 	                	scanner.nextLine();
@@ -256,7 +256,7 @@ public class Aims{
 	                	DigitalVideoDisc dvd = new DigitalVideoDisc(id, title, category, director, length, cost);
 	                	store.addDVD(dvd);
 	                }
-	                if (type.compareTo("CD") == 0) {
+	                if (type.compareTo("CD") == 0){
 	                	System.out.println("Enter the ID of the CD: ");
 	                	int id = scanner.nextInt();
 	                	scanner.nextLine();

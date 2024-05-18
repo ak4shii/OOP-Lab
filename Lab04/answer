@@ -2,44 +2,48 @@
 
 1. Top-Level Containers
 - AWT:
-Frame: The primary top-level container for AWT applications.
-Dialog: Used for creating dialog windows(both modal and non-modal).
+Frame: The primary top-level container for AWT applications. Frames are heavyweight components that serve as the main window of an application. They can hold menus, buttons, text fields, and other components, and are typically used as the entry point for AWT-based applications.
 Applet: Used for creating applets to run in a web browser.
+Window: AWT offers the Window class which is also a top-level container. However, unlike Frame, Window does not include the title bar, border, or menu bar. It is often used for creating additional windows or dialogs within an application.
 
 - Swing:
-JFrame: The primary top-level container for Swing applications, a subclass of java.awt.Frame but provides more features.
-JDialog: An extension of java.awt.Dialog, used for creating dialog windows in Swing
+JFrame: The primary top-level container for Swing applications. It is a lightweight container that represents a top-level window with decorations such as a title bar, border, and optional menu bar, and even provides additional features such as support for Swing components and pluggable look and feel.
+JDialog: An extension of java.awt.Dialog, used for creating dialog windows that pop up to interact with the user or display messages in Swing. JDialog is similar to AWT's Windows, however, it provides more features and flexibility such as support for Swing components and dialog-specific functionality.
 JApplet: An extension of java.applet.Applet, used for creating applets in Swing.
-JWindow: A Swing container that extends java.awt.Window and provides additional features.
 
 2. Component Class Names
 
-AWT Class Name	     Corresponding Swing Class Name
-Button	         	 JButton
-Label	             JLabel
-TextField	         JTextField
-TextArea             JTextArea
-Checkbox	 	     JCheckBox
-Choice	             JComboBox
-List	             JList
-Canvas	         	 JPanel
-Scrollbar	 	     JScrollBar
-ScrollPane	 	     JScrollPane
-Panel	         	 JPanel
-Menu	         	 JMenu
-MenuBar	         	 JMenuBar
-MenuItem	 	     JMenuItem
-CheckboxMenuItem	 JCheckBoxMenuItem
-PopupMenu	 	     JPopupMenu
+AWT Class Name: Button - Swing Class Name: JButton
+AWT Class Name: Label - Swing Class Name: JLabel
+AWT Class Name: TextField - Swing Class Name: JTextField
+AWT Class Name: TextArea - Swing Class Name: JTextArea
+AWT Class Name: Checkbox - Swing Class Name: JCheckBox
+AWT Class Name: Choice - Swing Class Name: JComboBox
+AWT Class Name: List - Swing Class Name: JList
+AWT Class Name: Canvas - Swing Class Name: JPanel
+AWT Class Name: Scrollbar - Swing Class Name: JScrollBar
+AWT Class Name: ScrollPane - Swing Class Name: JScrollPane
+AWT Class Name: Panel - Swing Class Name: JPanel
+AWT Class Name: Menu - Swing Class Name: JMenu
+AWT Class Name: MenuBar - Swing Class Name: JMenuBar
+AWT Class Name: MenuItem -Swing Class Name: JMenuItem
+AWT Class Name: CheckboxMenuItem - Swing Class Name: JCheckBoxMenuItem
+AWT Class Name: PopupMenu - Swing Class Name: JPopupMenu
 
 3. Event Handling
-- AWT Event Handling:
-AWT uses the Delegation Event Model, and Event Listeners in AWT are part of the java.awt.event package.
-AWT components generate events that are handled by Event Listeners. For example, an ActionEvent from a Button is handled by an ActionListener.
+AWT:
 
-- Swing Event Handling:
-Swing also uses the Delegation Event Model, however, Swing extends the AWT in terms of event handling mechanism. Event Listeners are part of the javax.swing.event package as well as the java.awt.event package.
-Swing provides more sophisticated event handling capabilities. For example, JButton uses an ActionListener just like Button, but Swing adds more listener types such as ChangeListener for JSlider and JSpinner.
+Delegation Model: AWT employs a delegation event model, where event handling is delegated. Each component in AWT features corresponding listener interfaces, like ActionListener or MouseListener, to which event listener objects can be assigned.
+Anonymous Inner Classes: In AWT, event listeners are often implemented using anonymous inner classes, aiming for code compactness. However, this approach may sacrifice readability and maintainability, particularly in larger applications.
+Single Event Dispatch Thread: AWT applications commonly utilize a single event dispatch thread (EDT) to manage all UI events. Consequently, lengthy tasks within this thread may cause UI unresponsiveness.
+
+Swing:
+
+Listener Model: Swing follows a listener event model akin to AWT, where event listeners are linked with components to manage specific event types. Swing offers a diverse range of listener interfaces for various events, such as ActionListener, MouseListener, and KeyListener.
+Anonymous Inner Classes: Similarly to AWT, Swing applications often employ anonymous inner classes for event listeners. However, Swing also supports alternative approaches, like separate listener classes or lambda expressions introduced in Java 8, which can enhance code readability and maintainability.
+Concurrency: Swing introduces additional considerations regarding concurrency compared to AWT. To prevent UI responsiveness issues, Swing applications must ensure that UI updates and event handling tasks occur on the event dispatch thread (EDT). Swing provides utilities like SwingUtilities.invokeLater() and SwingWorker to aid in managing concurrency.
+Custom Events: Swing enables the creation of custom events and event listeners, facilitating the implementation of application-specific event handling logic.
+Pluggable Look and Feel: Swing's pluggable look and feel architecture empowers developers to customize their application's appearance and behavior independently of the underlying platform. This customization extends to event handling behavior related to user interactions with GUI components.
 
 3.1.4
 We can utilize the instanceof operator in order to precisely check if a Media item implements the Playable interface and creates a "Play" button accordingly.
