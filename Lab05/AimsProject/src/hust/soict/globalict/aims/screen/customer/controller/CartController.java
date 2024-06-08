@@ -7,7 +7,6 @@ import hust.soict.globalict.aims.cart.Cart.Cart;
 import hust.soict.globalict.aims.exception.PlayerException;
 
 import java.io.IOException;
-
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
@@ -69,13 +68,13 @@ public class CartController {
     @FXML 
     public void initialize() {
     	colMediaId.setCellValueFactory(
-    			new PropertyValueFactory<Media, Integer>("ID"));
+    			new PropertyValueFactory<Media, Integer>("id"));
     	colMediaTitle.setCellValueFactory(
-    			new PropertyValueFactory<Media, String>("Title"));
+    			new PropertyValueFactory<Media, String>("title"));
     	colMediaCategory.setCellValueFactory(
-    			new PropertyValueFactory<Media, String>("Category"));
+    			new PropertyValueFactory<Media, String>("category"));
     	colMediaCost.setCellValueFactory(
-    			new PropertyValueFactory<Media, Float>("Cost"));
+    			new PropertyValueFactory<Media, Float>("cost"));
     	if(this.cart != null && cart.getItemsOrdered() != null) {
     		 filteredData = new FilteredList<>(cart.getItemsOrdered(), p -> true);
              SortedList<Media> sortedData = new SortedList<>(filteredData);
@@ -134,7 +133,6 @@ public class CartController {
 				btnPlay.setVisible(true);
 			}
 		}
-		
 	}
 
 	@FXML
@@ -169,7 +167,7 @@ public class CartController {
     	} catch (IOException e) {
     		e.printStackTrace();
     	}
-    
+    }
     
     @FXML
     void btnPlaceOrderPressed(ActionEvent event) {
@@ -192,7 +190,7 @@ public class CartController {
     	}
     }
     
- 
+    
     @FXML
     void updateFilteredData() {
         String filter = filterField.getText().toLowerCase();
@@ -212,4 +210,5 @@ public class CartController {
             return false;
         });
     }
+
 }
